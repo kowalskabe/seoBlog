@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import Link from 'next/link';
 import {APP_NAME} from '../config'
 import {
     Collapse,
@@ -15,6 +16,7 @@ import {
     NavbarText
 } from 'reactstrap';
 
+
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
@@ -22,13 +24,29 @@ const Header = () => {
     return (
         <div>
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">{APP_NAME}</NavbarBrand>
+                <Link href="/">
+                    <NavbarBrand className="font-weight-bold">{APP_NAME}</NavbarBrand>
+                </Link>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
+                    <Nav className="ml-auto" navbar>
+                        
                         <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
+                            <Link href="/signin">
+                                <NavLink>
+                                    Signin
+                                </NavLink>
+                            </Link>
                         </NavItem>
+
+                        <NavItem>
+                            <Link href="/signup">
+                                <NavLink>
+                                    Signup
+                                </NavLink>
+                            </Link>
+                        </NavItem>
+
                         <NavItem>
                             <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
                         </NavItem>

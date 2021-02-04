@@ -1,12 +1,12 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
 
-const Index = () => {
+const Signin = () => {
     return (
         <Layout>
-            <h2>Index Page</h2>
+            <h2>Signin page</h2>
         </Layout>
     );
 };
 
-export default Index;
+export default Signin;
