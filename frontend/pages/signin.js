@@ -5,7 +5,12 @@ import Link from 'next/link';
 const Signin = () => {
     return (
         <Layout>
-            <SigninComponent />
+            <h2 className="text-center py-5">Signin</h2>
+            <div className="row">
+                <div className="col-md-6 offset-md-3">
+                    <SigninComponent />
+                </div>
+            </div>
         </Layout>
     );
 };
